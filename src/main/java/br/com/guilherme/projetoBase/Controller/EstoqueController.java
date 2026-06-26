@@ -32,9 +32,7 @@ public class EstoqueController {
 
     private final EstoqueService estoqueService;
 
-    public EstoqueController(EstoqueService estoqueService) {
-        this.estoqueService = estoqueService;
-    }
+
 
     @Operation(summary = "Lista estoque com filtros opcionais por produto e/ou unidade")
     @ApiResponses({
