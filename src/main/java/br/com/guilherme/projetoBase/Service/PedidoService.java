@@ -116,7 +116,6 @@ public class PedidoService {
                         itemReq.quantidade());
             }
 
-            // 3.4 desconta do estoque
             estoque.setQuantidade(estoque.getQuantidade() - itemReq.quantidade());
             estoqueRepository.save(estoque);
 
