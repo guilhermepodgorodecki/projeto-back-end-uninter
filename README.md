@@ -107,9 +107,10 @@ Garanta que o MySQL está rodando e que as credenciais no `application.yaml` cor
 ./mvnw spring-boot:run
 ```
 
-**Windows:**
+**Windows:** Cole no terminal o comando abaixo
+
 ```powershell
-.\mvnw.cmd spring-boot:run
+./mvnw.cmd spring-boot:run
 ```
 
 > O wrapper baixa as dependências na primeira execução. Se preferir um Maven já instalado, use `mvn spring-boot:run`.
