@@ -98,7 +98,6 @@ Clone o repositório e entre na pasta:
 
 ```bash
 git clone https://github.com/guilhermepodgorodecki/projeto-back-end-uninter.git
-cd projetoBase
 ```
 
 Garanta que o MySQL está rodando e que as credenciais no `application.yaml` correspondem ao seu MySQL (seção [Configuração do banco de dados](#configuração-do-banco-de-dados)). Em seguida, suba a API:
@@ -110,18 +109,12 @@ Garanta que o MySQL está rodando e que as credenciais no `application.yaml` cor
 
 **Windows:**
 ```powershell
-mvnw.cmd spring-boot:run
+.\mvnw.cmd spring-boot:run
 ```
 
 > O wrapper baixa as dependências na primeira execução. Se preferir um Maven já instalado, use `mvn spring-boot:run`.
 
 A API sobe em **`http://localhost:8080`**.
-
-Para gerar o artefato executável (opcional):
-```bash
-./mvnw clean package
-java -jar target/projetoBase-0.0.1-SNAPSHOT.jar
-```
 
 ---
 
@@ -204,11 +197,6 @@ São **15 cenários (T01–T15)**: 9 positivos e 6 negativos, cobrindo autentica
 5. As pastas 1–6 cobrem o fluxo positivo; a pasta **7. Erros** cobre os cenários negativos e deve ser executada **após** o fluxo principal.
 
 > **Ordem do fluxo crítico:** o pagamento exige o pedido em `RECEBIDO`, por isso a atualização de status (T07) ocorre **após** o pagamento (T06).
-
-**Testes automatizados (contexto):**
-```bash
-./mvnw test
-```
 
 ---
 
